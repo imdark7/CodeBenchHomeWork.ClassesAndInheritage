@@ -7,7 +7,6 @@ public class Dog {
         this.age = age;
         this.breed = breed;
     }
-
     public int getAge() {
         return age;
     }
@@ -23,5 +22,4 @@ public class Dog {
     public void bark() {
         System.out.println("гав-гав-гав");
     }
-
 }

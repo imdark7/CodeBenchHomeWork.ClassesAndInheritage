@@ -1,10 +1,13 @@
+import java.util.Scanner;
+
 public class Calculator {
     String color;
     int weight;
     String producedBy;
     String type;
     boolean isTurnedOn = false;
-    int currentNumber = 0;
+    double currentNumber = 0;
+    Scanner scanner = new Scanner(System.in);
 
     public String getColor() {
         return color;
@@ -12,10 +15,10 @@ public class Calculator {
     public void setColor(String color) {
         this.color = color;
     }
-    public int getCurrentNumber() {
+    public double getCurrentNumber() {
         return currentNumber;
     }
-    public void setCurrentNumber(int currentNumber) {
+    public void setCurrentNumber(double currentNumber) {
         this.currentNumber = currentNumber;
     }
     public int getWeight() {
@@ -38,7 +41,7 @@ public class Calculator {
     }
 
     public void setWorkStatus () {
-        this.isTurnedOn = !isTurnedOn;
+        isTurnedOn = !isTurnedOn;
     }
 
     public void clear() {
@@ -48,4 +51,36 @@ public class Calculator {
     public void pressOnOffButton() {
         setWorkStatus();
     }
+
+    public double inputNumber() {
+        double a;
+        a = scanner.nextDouble();
+        setCurrentNumber(a);
+        return  a;
+    }
+
+    public double sum() {
+        return currentNumber = currentNumber + inputNumber();
+    }
+
+    public double sub() {
+        return currentNumber = currentNumber - inputNumber();
+    }
+
+    public double mult() {
+        return currentNumber = currentNumber * inputNumber();
+    }
+
+    public double div() {
+        return currentNumber = currentNumber / inputNumber();
+    }
+
+    public double negate() {
+        return currentNumber = 0 - currentNumber;
+    }
+
+    public double percentage() {
+        return currentNumber = currentNumber * inputNumber() / 100;
+    }
+
 }
